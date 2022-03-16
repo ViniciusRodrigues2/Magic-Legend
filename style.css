@@ -1,0 +1,151 @@
+@charset "UTF-8";
+body{
+    background-image: linear-gradient(to left,rgba(0, 0, 0, 0.329),rgba(0, 0, 0, 0.5)),url('image/background.jpg');
+    width: 100%;
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+.container {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.container .navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.container .navbar .logo{
+    display: block;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.container .navbar .logo a{
+    color: #3c4eec;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.container .navbar .logo a span{
+    color: #002c3c;
+}
+.container .navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin-top: 20px;
+}
+.container .navbar ul li a{
+    text-decoration: none;
+    padding: 15px 40px;
+    color: rgb(255, 255, 255);
+    transition: all .4s ease-in-out;
+}
+.container .navbar ul li a:hover{
+    border-bottom: 1px solid white;
+    color: #224ccc;
+}
+.container .navbar label{
+    display: none;
+}
+.container .navbar #menu{
+    display: none;
+}
+.conteudo{
+    color: white;
+    margin-top: 20%;
+    margin-left: 5%;
+}
+.conteudo h4{
+    font-size: 20px;
+}
+.conteudo h1{
+    display: block;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+   margin-top: 10px;
+   margin-bottom: 20px;
+}
+.conteudo h1 span{
+   color: #4daa5a;
+}
+.conteudo p{
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    color: #919191;
+    width: 40%;
+}
+.conteudo a{
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 15px 40px;
+    margin-top: 10px;
+    color: #224ccc;
+    border-radius: 30px;
+    transition: all .3s ease-in-out;
+    font-size: 20px;
+}
+.conteudo a:hover{
+    background-color: #3c4eec;
+    color: white;
+}
+.rodape{
+    position: absolute;
+    bottom: 0;
+    left: 90%;
+    display: block;
+    padding: 10px 20px;
+    background-color: transparent;
+}
+.rodape #check{
+    opacity: 0;
+    overflow: hidden; 
+     width: 1px;
+    height: 1px;
+}
+.rodape label{
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    left: 40%;
+    top: -5%;
+    user-select: none;
+}
+.rodape label:hover{
+    color: rgba(78, 78, 78, 0.356);
+    cursor: pointer;
+}
+.rodape #check:checked ~ img{
+    cursor: pointer;
+}
+.rodape #check:checked ~ img{
+    transform: translateX(0);
+}
+.rodape img{
+    margin: 20px;
+    width: 60px;
+    opacity: 1;
+    transform: translateX(700px);
+    padding: 14px;
+    border-radius: 0;
+    z-index: 999;
+    transition: all 400ms ease-in-out;
+    user-select: none;
+    border-radius: 20px;
+}
+.rodape img:hover{
+    border-radius: 50px;
+    padding: 8px;
+}
+.rodape img span{
+    color: white;
+    font-size: 50px;
+}

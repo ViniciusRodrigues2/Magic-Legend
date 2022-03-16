@@ -1,0 +1,156 @@
+@charset "UTF-8";
+
+@media  screen and (max-width:750px) {
+    body{
+        height: 120vh;
+        overflow-x: hidden;
+    }
+    .container .navbar{
+        display: flex;
+        height: 15vh;
+    }
+    .container .navbar ul li{
+       display: inline-block;
+    }
+    .container .navbar ul li a{
+        padding: 0;
+        margin: 10px;
+    }
+  .conteudo{
+      text-align: center;
+      margin-top: 40%;
+  }
+  .conteudo p{
+      text-align: center;
+      width: 100%;
+  }
+  .conteudo a{
+      background-color: #2c73c4;
+      color: white;
+      margin-bottom: 20px;
+    }
+  .conteudo a:hover{
+    background-color: #2c73c4;
+  }
+  .rodape{
+    bottom: -10%;
+    left: -20%;
+    display: block;
+    padding: 0;
+  }
+  .rodape label:hover{
+    color: rgba(255, 255, 255, 0.356);
+    cursor: pointer;
+}
+  .rodape img{
+    width: 50px;
+    opacity: 1;
+    transform: translateX(900px);
+    padding: 12px;
+    border-radius: 0;
+    z-index: 999;
+    transition: all 400ms ease-in-out;
+    user-select: none;
+    border-radius: 20px;
+    position: relative;
+    top: 50px;
+}
+.rodape #check:checked ~ img{
+    transform: translateX(200px);
+}
+.rodape label{
+    position: absolute;
+    top: 80%;
+}
+}
+@media screen and (max-width:600px){
+    body{
+        width: 100%;
+        height: 100vh;
+        background-color: #0e0e0e;
+        background-image: none;
+    }
+    .container{
+        display: block;
+        width: 100%;
+    }
+    .container .navbar{
+        display: block;
+    }
+    .container .navbar label{
+        display: block;
+        color: white;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .container .navbar #menu{
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        overflow: hidden;
+    }
+    .container .navbar ul{
+        background-color: rgba(0, 0, 0, 0);
+        background-origin: content-box;
+        height: 0;
+        width: 0;
+        transform: translateX(500px);
+        transition: all .4s ease-in-out;
+    }
+    .container .navbar #menu:checked ~ ul{
+        background-color: black;
+        height: 32vh;
+        width: 100%;
+        background-origin: content-box;
+        transform: translateX(0);
+    }
+    .container .navbar ul li{
+        transform: translateX(500px);
+        display: block;
+        transition: all .4s ease-in-out;
+        margin-top: 5%;
+    }
+    .container .navbar ul li a{
+        font-size: 30px;
+    }
+    .container .navbar ul li a:hover{
+      border-bottom: none;
+        color: white;
+    }
+    .container .navbar  #menu:checked ~ ul li{
+        transform: translateX(0);
+    }.conteudo{
+        display: block;
+        margin-top: 80%;
+    }
+    .container .navbar label{
+        font-size: 2.5em;
+        margin: 0;
+        position: absolute;
+    }
+    .container .logo a{
+        font-size: 1.2em;
+    }
+    .rodape{
+        margin-top: 20px;
+        background-image: linear-gradient(to left,black,black,transparent);
+        position:relative;
+        width: 120vw;
+        z-index: 9999;
+        height: 15%;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+    }
+    .rodape #check:checked ~ img{
+        transform: translateX(180px);
+    }
+    .rodape img{
+      width: 60px;
+        top: 50%;
+    }
+    .rodape label{
+        top: 50%;
+       left: 20%;
+    }
+}
